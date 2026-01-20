@@ -2,3 +2,4 @@ ipykernel
 jupyter
 river
 darts
+scikit-learn
