@@ -17,6 +17,6 @@ def apply_window_func(series: TimeSeries, window: int, func):
 
     for t in range(window - 1, len(values)):
         wnd = np.array(values[t - window + 1 : t + 1])
-        results[t] = func(wnd)
+        results[t] = func(wnd, t)
     
     return TimeSeries.from_times_and_values(times, results)
